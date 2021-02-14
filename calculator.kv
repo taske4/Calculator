@@ -1,0 +1,132 @@
+<CalculatorGui>
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+
+        GridLayout:
+            cols: 2
+
+            Button:
+                text: 'HEX'
+                on_press: root.changeSystem(system_hex.name)
+            Label:
+                id: system_hex
+                name: 'hex'
+            Button:
+                text: 'DEC'
+                on_press: root.changeSystem(system_dec.name)
+            Label:
+                id: system_dec
+                name: 'dec'
+            Button:
+                text: 'BIN'
+                on_press: root.changeSystem(system_bin.name)
+            Label:
+                id: system_bin
+                name: 'bin'
+        GridLayout:
+            cols: 6
+
+            Button:
+                id: key_7
+                groups: ['hex', 'dec']
+                text: '7'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_8
+                groups: ['hex', 'dec']
+                text: '8'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_9
+                groups: ['hex', 'dec']
+                text: '9'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_a
+                groups: ['hex']
+                text: 'A'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_b
+                groups: ['hex']
+                text: 'B'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_c
+                groups: ['hex']
+                text: 'C'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_4
+                groups: ['hex', 'dec']
+                text: '4'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_5
+                groups: ['hex', 'dec']
+                text: '5'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_6
+                groups: ['hex', 'dec']
+                text: '6'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_d
+                groups: ['hex']
+                text: 'D'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_e
+                groups: ['hex']
+                text: 'E'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_f
+                groups: ['hex']
+                text: 'F'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_1
+                groups: ['hex', 'dec', 'bin']
+                text: '1'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_2
+                groups: ['hex', 'dec']
+                text: '2'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_3
+                groups: ['hex', 'dec']
+                text: '3'
+                on_press: root.calc(self.text)
+
+            Button:
+                id: key_0
+                groups: ['hex', 'dec', 'bin']
+                text: '0'
+                on_press: root.calc(self.text)
+
+            Button:
+                text: 'AC'
+                on_press: root.clear()
+
+            Button:
+                text: 'Del'
+                on_press: root.delete()
